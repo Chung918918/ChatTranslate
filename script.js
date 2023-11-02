@@ -16,7 +16,7 @@ async function submitToAPI() {
     document.getElementById('apiResponse').textContent = '请耐心等待，正在分析中...';
     // 调用API
     const apiEndpoint = 'https://api.openai.com/v1/chat/completions';
-    const apiKey = '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'; 
+    const apiKey = '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'; 
     try {
         const response = await fetch(apiEndpoint, {
             method: 'POST',
