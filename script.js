@@ -1,7 +1,6 @@
 async function submitToAPI() {
     // 获取下拉框和输入框的值
     const gender2Value = document.getElementById('gender2Select').value;
-    const gender3Value = document.getElementById('gender3Select').value;
     const genderValue = document.getElementById('genderSelect').value;
     const ageValue = document.getElementById('ageSelect').value;
     const messageValue = document.getElementById('inputMessage').value.trim();
@@ -9,11 +8,9 @@ async function submitToAPI() {
         alert('请输入信息！');
         return;
     }
-    if(gender3Value='是'){
-        const combinedMessage =`我是${genderValue}的，对方是${gender2Value}的，并且年龄${ageValue} 。我们讨论的是关于韩国股票的问题，我想向对方说：“${messageValue}”。以韩国股民说话的方式，我应该怎么用韩语来表达这句话？`;
-    }esle{
-        const combinedMessage =`我是${genderValue}的，对方是${gender2Value}的，并且年龄${ageValue} 。我想向对方说：“${messageValue}”。以韩国人说话的方式，我应该怎么用韩语来表达这句话？`;
-    }
+    const combinedMessage =`我是${genderValue}的，对方是${gender2Value}的，并且年龄${ageValue} 。我想向对方说：“${messageValue}”。以韩国股民说话的方式，我应该怎么用韩语来表达这句话？`;
+
+
     // 组合文字
     
     // 在页面上显示发送给API的请求
