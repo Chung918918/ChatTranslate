@@ -8,7 +8,7 @@ async function submitToAPI() {
         alert('请输入信息！');
         return;
     }
-    const combinedMessage =`我是${genderValue}的，对方是${gender2Value}的，并且年龄${ageValue} 。我想向对方说：“${messageValue}”。以韩国股民说话的方式，我应该怎么用韩语来表达这句话？`;
+    const combinedMessage =`我是${genderValue}的，对方是${gender2Value}的，并且年龄${ageValue} 。我想向对方说：“${messageValue}”。以韩国股民说话用词的方式，我应该怎么用韩语来表达这句话？`;
 
 
     // 组合文字
