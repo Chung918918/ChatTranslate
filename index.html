@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ... [其他的头部标签] ... -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            padding: 20px;
+            font-size: 1.1em;  /* 增大字体大小 */
+        }
+        .card {
+            margin-bottom: 20px;  /* 卡片底部的边距 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* 添加阴影效果 */
+        }
+        textarea {
+            resize: vertical;
+        }
+        .response-container {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;  /* 背景颜色 */
+        }
+        .loading-spinner {
+            display: none;
+            font-size: 2em;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1 align="center">牛逼专用基于GPT3.5自动场景翻译工具</h1>
+    <h3 align="center">中文翻译成韩语</h1>
+        <!-- 下拉选择框 1 -->
+        <div class="form-group">
+            <label for="genderSelect">我是</label>
+            <select id="genderSelect" class="form-control">
+                <option value="男">男</option>
+                <option value="女">女</option>
+            </select>
+        </div>
+        <!-- 下拉选择框 1 -->
+        <div class="form-group">
+            <label for="gender2Select">对方是</label>
+            <select id="gender2Select" class="form-control">
+                <option value="男">男</option>
+                <option value="女">女</option>
+            </select>
+        </div>
+
+        <!-- 下拉选择框 2 -->
+        <div class="form-group">
+            <label for="ageSelect">对方年龄（或者需要使用敬语，请选择比我大）</label>
+            <select id="ageSelect" class="form-control">
+                <option value="比我大">比我大</option>
+                <option value="比我小">比我小</option>
+            </select>
+        </div>
+
+        <!-- 输入框 -->
+        <div class="form-group">
+            <label for="inputMessage">信息</label>
+            <textarea id="inputMessage" class="form-control" rows="3" placeholder="请输入信息"></textarea>
+        </div>
+
+        <!-- 提交按钮 -->
+        <button onclick="submitToAPI()" class="btn btn-primary">提交</button>
+<!-- 显示发送给API的请求 -->
+<div id="apiRequest" style="margin-top: 20px;"></div>
+
+<!-- 显示API返回结果 -->
+<div id="apiResponse" style="margin-top: 20px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"></div>
+
+ <div class="container">
+    <h3 align="center">韩语翻译成中文</h1>
+<!-- 输入框 -->
+        <div class="form-group">
+            <label for="inputMessage">信息</label>
+            <textarea id="inputMessage2" class="form-control" rows="3" placeholder="请输入信息"></textarea>
+        </div>
+
+        <!-- 提交按钮 -->
+        <button onclick="submitToAPI2()" class="btn btn-primary">提交</button>
+<!-- 显示发送给API的请求 -->
+<div id="apiRequest2" style="margin-top: 20px;"></div>
+
+<!-- 显示API返回结果 -->
+<div id="apiResponse2" style="margin-top: 20px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"></div>
+
+</div>
+    <!-- 引入Bootstrap和Popper.js的JS文件 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript引入 -->
+    <script src="script.js"></script>
+</body>
+</html>
